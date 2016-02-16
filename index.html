@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script>
+var calculator = {
+ a:undefined,
+ b:undefined,
+ read : function (a,b) {
+   this.a = a; 
+   this.b = b;
+ },
+sum : function (){
+return this.a + this.b;
+},
+mul : function (){
+return this.a * this.b;
+}
+}
+
+calculator.read(5,2);
+console.log( calculator.sum() );
+console.log( calculator.mul() );
+
+
+var ladder = {
+step: 0,
+up:function() {
+ this.step++;
+return this;
+},
+down:function(){
+this.step--;
+return this;
+},
+showStep: function(){
+console.log(this.step);
+},
+};
+ladder.up().up().down().up().showStep();
+		</script>
+	</body>
+</html>
